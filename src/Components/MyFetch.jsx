@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import Modal from "./Modal";
@@ -48,21 +46,36 @@ function MyFetch({ searchWord }) {
         {apiData.map((character) => {
           if (character.name.includes(searchWord)) {
             return (
-                <Card key={character.id} character={character} callback={handleModal} />
-            )
+              <Card
+                key={character.id}
+                character={character}
+                callback={handleModal}
+              />
+            );
           }
-})}
+        })}
       </div>
 
-      {isModalOpen && <Modal character={selectedCharacter} callback={handleModal} />}
+      {isModalOpen && (
+        <Modal character={selectedCharacter} callback={handleModal} />
+      )}
 
-      <div>
-        <button onClick={() => handlePageChange(currentPage - 1)}>Previous</button>
-        <button onClick={() => handlePageChange(currentPage + 1)}>Next</button>
+      <div className="buttonbox">
+        <button
+          className="pagechange"
+          onClick={() => handlePageChange(currentPage - 1)}
+        >
+          Previous
+        </button>
+        <button
+          className="pagechange"
+          onClick={() => handlePageChange(currentPage + 1)}
+        >
+          Next
+        </button>
       </div>
     </>
   );
 }
 
 export default MyFetch;
-

@@ -55,3 +55,42 @@
     background-color: #0056b3;
    
 }
+
+.buttonbox {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.pagechange {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    
+}
+
+
+.pagechange:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+   
+}
+
+
+.pagechange:active {
+    background-color: #00408d;
+    transform: scale(0.95);
+}
+
+.pagechange:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    color: #666666;
+}

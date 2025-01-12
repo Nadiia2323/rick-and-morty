@@ -1,8 +1,6 @@
 import React from "react";
-import MyButton from "./MyButton";
 
 function Card({ character, callback }) {
-  // console.log('callback :>> ', callback);
   return (
     <div key={character.id} className="card" id="flip-card">
       <div className="flip-card-inner">
@@ -11,8 +9,9 @@ function Card({ character, callback }) {
         </div>
         <div className="flip-card-back">
           <h3>{character.name}</h3>
-          <button onClick={()=>callback(character)}>more info</button>
-          {/* <MyButton onClick={()=>callback() } /> */}
+          <button className="closebutton" onClick={() => callback(character)}>
+            more info
+          </button>
         </div>
       </div>
     </div>
