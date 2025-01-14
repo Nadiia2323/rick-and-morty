@@ -94,3 +94,64 @@
     cursor: not-allowed;
     color: #666666;
 }
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+        max-width: 320px;
+        width: 90%;
+    }
+
+    .picture {
+        border-radius: 5px;
+        margin-bottom: 8px;
+    }
+
+    .character-name {
+        font-size: 1.2rem;
+        /* Уменьшить размер текста */
+        margin-bottom: 8px;
+    }
+
+    .infotext {
+        font-size: 0.9rem;
+        margin: 3px 0;
+    }
+
+    .closebutton,
+    .pagechange {
+        font-size: 0.9rem;
+        /* Сделать кнопки компактнее */
+        padding: 8px 16px;
+    }
+
+    .buttonbox {
+        flex-direction: column;
+        /* Расположить кнопки в колонку */
+        gap: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 10px;
+        max-width: 280px;
+    }
+
+    .character-name {
+        font-size: 1rem;
+    }
+
+    .infotext {
+        font-size: 0.8rem;
+    }
+
+    .closebutton,
+    .pagechange {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .buttonbox {
+        gap: 5px;
+    }
+}

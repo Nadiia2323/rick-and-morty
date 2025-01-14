@@ -9,7 +9,6 @@ function MyFetch({ searchWord }) {
   const [totalPages, setTotalPages] = useState(1);
   const [selectedCharacter, setSelectedCharacter] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  console.log(searchWord);
 
   const fetchData = (number) => {
     const api = `https://rickandmortyapi.com/api/character/?page=${number}`;
